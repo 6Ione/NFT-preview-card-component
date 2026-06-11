@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: hsl(217, 54%, 11%);
+      font-family: 'Outfit', serif;
+    }
+
+    .NFT-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      
+    }
+    
+    .NFT-content {
+      background-color: hsl(216, 50%, 16%);
+      max-width: 320px;
+      border-radius: 15px;
+    }
+
+    .NFT-Title img {
+      display: block;
+      border-radius: 8px;
+      margin: auto;
+      width: 90%;
+      padding-top: 25px;
+    }
+
+    .NFT-Title h1 {
+      display: flex;
+      color: hsl(0, 0%, 100%);
+      padding-left: 25px;
+      margin-bottom: 30px;
+      text-align: left;
+      font-size: 1.3em
+    }
+    .NFT-Title p {
+      display: flex;
+      color: hsl(215, 51%, 70%);
+      padding-left: 25px;
+      margin-bottom: 30px;
+      text-align: left;
+      font-size: 1.1em;
+    }
+
+    .NFT-price {
+      display: grid;
+      color: hsl(178, 100%, 50%);
+      padding-left: 25px;
+      text-align: left;
+    }
+    .NFT-time-left {
+      display: grid;
+      color: hsl(215, 51%, 70%);
+      padding-right: 25px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="NFT-container">
+      <div class="NFT-content">
+
+        <div class="NFT-Title">
+          <!-- NFT image -->
+           <img src="images/image-equilibrium.jpg" alt="equilibrium-NFT-Image">
+          <!-- NFT Name -->
+           <h1>Equilibrium #3429</h1>
+          <!-- NFT description -->
+           <p>Our Equilibrium collection promotes balance anmd calm.</p>
+        </div>
+
+        <div class="NFT-bottom-section">
+          <span class="NFT-price" id="NFT-price">0.041 ETH</span>
+          <span class="NFT-time-left" id="NFT-time-left">3 Days left</span>
+        </div>
+
+        <hr>
+        <div class="NFT-creator">
+          <!-- Author picture -->
+
+          <!-- Author name -->
+           <p>Creation of Jules Wyvern</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Capo</a>.
+  </footer>
+</body>
+</html>
