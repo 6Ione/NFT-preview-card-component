@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap">  <title>Frontend Mentor | NFT preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -39,9 +38,8 @@
       overflow: hidden;
     }
 
-    .NFT-image-link img {
-      display: block;
-      width: 100%;
+    .NFT-image-link {
+      width: 85%;
       border-radius: 8px;
     }
 
@@ -58,6 +56,31 @@
     .NFT-image-link:hover::after {
       opacity: 0.5;
     }
+    
+    .base-image {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+
+    }
+
+    .hover-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 25%;
+      height: auto;
+
+      opacity: 0;
+      z-index: 2;
+      transition: opacity 0.3s ease;
+    }
+
+    .NFT-image-link:hover .hover-image {
+      opacity: 1;
+    }
 
     .NFT-Title h1 {
       display: flex;
@@ -68,10 +91,15 @@
       font-size: 1.3em;
       font-weight: 600;
     }
+
     .nft-title-link {
-      color: hsl(0, 0%, 100%);        /* white by default */
-      text-decoration: none;           /* remove underline */
-      transition: color 0.2s ease;     /* smooth color change */
+      color: hsl(0, 0%, 100%);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nft-title-link:hover {
+      color: hsl(178, 100%, 50%);
     }
 
     .NFT-Title p {
@@ -125,9 +153,9 @@
     }
 
     .author-link {
-      color: hsl(0, 0%, 100%);        /* white by default */
-      text-decoration: none;           /* remove underline */
-      transition: color 0.2s ease;     /* smooth color change */
+      color: hsl(0, 0%, 100%);
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
     .author-link:hover {
       color: hsl(178, 100%, 50%);
@@ -157,8 +185,13 @@
 
         <div class="NFT-Title">
           <!-- NFT image -->
-           <a href=""# class="NFT-image-link"> <img src="images/image-equilibrium.jpg" alt="equilibrium-NFT-Image"></a>
-          <!-- NFT Name -->
+           <div class="image-container">
+              <a href="#" class="NFT-image-link">
+                <img src="images/image-equilibrium.jpg" alt="equilibrium-NFT-Image" class="base-image">
+                <img src="images/icon-view.svg" alt="View Icon" class="hover-image">
+              </a>
+           </div>
+           <!-- NFT Name -->
            <h1><a href="#" class="nft-title-link">Equilibrium #3429</a></h1>
           <!-- NFT description -->
            <p>Our Equilibrium collection promotes balance and calm.</p>
